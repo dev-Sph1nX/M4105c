@@ -21,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'id_role'
     ];
 
     /**
@@ -41,4 +42,25 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    protected $with = [
+        "famillesProblemes"
+    ];
+
+    function Role() {
+        return $this->hasOne(Role::class, 'id_role', 'id_role');
+    }
+
+    function TicketsOperateur() {
+        return $this->hasMany(Ticket::class, 'id_operateur', 'id');
+    }
+
+    public function famillesProblemes(){
+        return $this->belongsToMany(Probleme_Famille::class, 'operateur_famille_problemes', 
+        'id_famille_probleme', 'id_utilisateur', 'id', 'id_famille_probleme');
+    }
+
+    function notifications() {
+        return $this->hasMany(Notification::class, 'id_user', 'id');
+    }
 }

@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .unknow{
+        --tw-bg-opacity: 1;
+        background-color: rgb(14 165 233);
+    }
+    .operateur {
+        --tw-bg-opacity: 1;
+        background-color: rgb(188 102 0);
+    }
+    .demandeur {
+        --tw-bg-opacity: 1;
+        background-color: #008000;
+    }
+    .responsable{
+        --tw-bg-opacity: 1;
+        background-color: rgb(239 68 68);
+    }
+
+    .unknow_text{
+        color: rgb(14 165 233);
+    }
+    .operateur_text{
+        color: rgb(188 102 0);
+    }
+    .demandeur_text {
+        color: #008000;
+    }
+    .responsable_text{
+        color: rgb(239 68 68);
+    }
+
+    .opaUn{
+        opacity: 1;
+    }
+    .opaZero{
+        opacity: 0;
+    }
+}
