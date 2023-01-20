@@ -18,13 +18,14 @@
         "tailwindcss": "^3.0.21",
         "v-calendar": "^2.4.1",
         "vue-loader": "^15.9.8",
-        "vue-template-compiler": "^2.6.14"
+        "vue-template-compiler": "2.6.12"
     },
     "dependencies": {
         "@inertiajs/inertia": "^0.11.0",
         "@inertiajs/inertia-vue": "^0.8.0",
         "v-toaster": "^1.0.3",
-        "vue": "^2.6.14",
+        "vue": "2.6.12",
+        "vue-moments-ago": "^0.2.0",
         "vuex": "^3.6.2"
     }
 }
